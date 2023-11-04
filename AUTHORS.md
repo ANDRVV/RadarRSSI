@@ -12,5 +12,4 @@ Authors
 <p>E-Mail: <a href="mailto:giovannivaccaro2@gmail.com">giovannivaccaro2@gmail.com</a></p>
 <ul>
   <li>Programming in C</li>
-  <li>Logic & Math</li>
 </ul>

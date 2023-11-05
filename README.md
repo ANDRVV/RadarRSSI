@@ -2,6 +2,7 @@
 <p>
     <img src="https://github.com/ANDRVV/RadarRSSI/blob/main/images/RadarRSSI-logo.png?raw=true" width=425.5 height=202.5 alt="Gapcast logo">
 </p>
+</div>
     
 [Ask me](mailto:vaccaro.andrea45@gmail.com) | [Features](https://github.com/ANDRVV/RadarRSSI#features)
 
@@ -13,14 +14,16 @@
 
 This tool uses the first Friis equation to calculate its approximate meters. Among the information that must be entered to make the calculation are:</p>
 
-<ol>
-    <li><strong>TX Antenna</strong> dBi</li>
-    <li><strong>TX Power</strong> dBm</li>
-    <li><strong>RX Antenna</strong> dBi</li>
-    <li><strong>RX Received Power</strong> dBm</li>
-    <li><strong>Path Loss</strong> dB</li>
-    <li><strong>Channel</strong></li>
-</ol>
+<div align="left" style="display:grid;place-items:center;">
+    <ol>
+        <li><strong>TX Antenna</strong> dBi</li>
+        <li><strong>TX Power</strong> dBm</li>
+        <li><strong>RX Antenna</strong> dBi</li>
+        <li><strong>RX Received Power</strong> dBm</li>
+        <li><strong>Path Loss</strong> dB</li>
+        <li><strong>Channel</strong></li>
+    </ol>
+</div>
 
 <h2 align="center">Path Loss</h2>
 
@@ -30,9 +33,11 @@ This tool uses the first Friis equation to calculate its approximate meters. Amo
 
 <p align="center">RadarRSSI was written in the following languages and can be used as a library:</p>
 
-<ul>
-    <li>Golang [<a href="https://github.com/ANDRVV/RadarRSSI/tree/main/src/Go">Check docs</a>]</li>
-    <li>Python [Coming soon...]</li>
-    <li>C++ [Coming soon...]</li>
-    <li>C [Coming soon...]</li>
-</ul>
+<div align="left" style="display:grid;place-items:center;">
+    <ul>
+        <li>Golang [<a href="https://github.com/ANDRVV/RadarRSSI/tree/main/src/Go">Check docs</a>]</li>
+        <li>Python [Coming soon...]</li>
+        <li>C++ [Coming soon...]</li>
+        <li>C [Coming soon...]</li>
+    </ul>
+</div>

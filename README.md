@@ -2,17 +2,17 @@
 <p>
     <img src="https://github.com/ANDRVV/RadarRSSI/blob/main/images/RadarRSSI-logo.png?raw=true" width=425.5 height=202.5 alt="Gapcast logo">
 </p>
-</div>
-    
+
 [Ask me](mailto:vaccaro.andrea45@gmail.com) | [Features](https://github.com/ANDRVV/RadarRSSI#features)
 
+</div>
 <p align="center"><strong>RadarRSSI</strong> is an IEEE 802.11 Radar library based on RSSI information 📶</p>
 
 <h1 align="center">How it works and what RadarRSSI is</h1>
 
-<p align="center"><strong>RadarRSSI is a radiolocation tool</strong> based on <i>RSSI</i> (Received Signal Strength Indicator).
+<p align="center"><strong>RadarRSSI is a radiolocation tool</strong> based on <i>RSSI</i> (Received Signal Strength Indicator).</p>
 
-This tool uses the first Friis equation to calculate its approximate meters. Among the information that must be entered to make the calculation are:</p>
+<p>This tool uses the first Friis equation to calculate its approximate meters. Among the information that must be entered to make the calculation are:</p>
 
 <div align="left" style="display:grid;place-items:center;">
     <ol>

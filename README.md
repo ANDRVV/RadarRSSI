@@ -7,4 +7,32 @@
 
 <p align="center"><strong>RadarRSSI</strong> is an IEEE 802.11 Radar library based on RSSI information 📶</p>
 
-**[WARNING]** This repo is under development, it cannot be used until the first version.
+<h1 align="center">How it works and what RadarRSSI is</h1>
+
+<p align="center"><strong>RadarRSSI is a radiolocation tool</strong> based on <i>RSSI</i> (Received Signal Strength Indicator).
+
+This tool uses the first Friis equation to calculate its approximate meters. Among the information that must be entered to make the calculation are:</p>
+
+<ol align="center">
+    <li align="left"><strong>TX Antenna</strong> dBi</li>
+    <li align="left"><strong>TX Power</strong> dBm</li>
+    <li align="left"><strong>RX Antenna</strong> dBi</li>
+    <li align="left"><strong>RX Received Power</strong> dBm</li>
+    <li align="left"><strong>Path Loss</strong> dB</li>
+    <li align="left"><strong>Channel</strong></li>
+</ol>
+
+<h2 align="center">Path Loss</h2>
+
+<p align="center">If you do not enter the path loss in the calculation, it will be by default <strong>10 dB for the 2.4</strong> Ghz band, and <strong>2 dB for the 5 Ghz</strong>. If you do not even want to assign the default path loss, just enter 0.001 dB, which will be negligible and no changes will be made in the calculation.</p>
+
+<h1 align="center">Programming languages</h1>
+
+<p align="center">RadarRSSI was written in the following languages and can be used as a library:</p>
+
+<ul align="center">
+    <li align="left">Golang [<a href="https://github.com/ANDRVV/RadarRSSI/tree/main/src/Go">Check docs</a>]</li>
+    <li align="left">Python [Coming soon...]</li>
+    <li align="left">C++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Coming soon...]</li>
+    <li align="left">C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [Coming soon...]</li>
+</ul>

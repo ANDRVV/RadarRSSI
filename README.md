@@ -36,7 +36,7 @@
 <div align="left" style="display:grid;place-items:center;">
     <ul>
         <li>Golang [<a href="https://github.com/ANDRVV/RadarRSSI/tree/main/src/Go">Check docs</a>]</li>
-        <li>Python [Coming soon...]</li>
+        <li>Python [<a href="https://github.com/ANDRVV/RadarRSSI/tree/main/src/Python">Check docs</a>]</li>
         <li>C++ [Coming soon...]</li>
         <li>C [Coming soon...]</li>
     </ul>

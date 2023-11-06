@@ -43,7 +43,6 @@
                   /*
                   Return approximating DB Path Loss
                   (according to some research)
-                  More precision on 2.4 Ghz
                   */
         // or
         var DBPathLoss float64 = 14

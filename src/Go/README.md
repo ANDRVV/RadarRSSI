@@ -11,13 +11,13 @@
     )
 
     func main() {
-        RFDATA := GetCustomRFData(-20, 1, 5)
+        RFDATA := RadarRSSI.GetCustomRFData(-20, 1, 5)
                   /*
                   Insert received dBm, channel & rx/your dBi antenna.
                   */ 
         // or
         var Packet []byte = ...
-        RFDATA, err := GetRFDataFromRadiotap(Packet)
+        RFDATA, err := RadarRSSI.GetRFDataFromRadiotap(Packet)
                     /*
                     Insert full packet or RadioTap layer (bytes).
                     If the packet isn't valid return error.
@@ -27,14 +27,14 @@
             return
         }
 
-        TXData := GetDefaultTransmitterData()
+        TXData := RadarRSSI.GetDefaultTransmitterData()
                   /*
                   GetDefaultTransmitterData() return
                   TX Antenna: 3    dBi
                   TX Power  : 20.5 dBm
                   */
         // or
-        TXData := GetCustomTransmitterData(4, 23)
+        TXData := RadarRSSI.GetCustomTransmitterData(4, 23)
                   /*
                   Insert custom TX Antenna dBi
                   & TX Power dBm
@@ -57,7 +57,7 @@
                  If you don't even want to enter the default path loss, add 0.001 dB.
                  */
 
-        APPRX_METERS = Radiolocate(RFData, TXData, DBPathLoss)
+        APPRX_METERS = RadarRSSI.Radiolocate(RFData, TXData, DBPathLoss)
 
         fmt.Println(APPRX_METERS, " meters")
     }

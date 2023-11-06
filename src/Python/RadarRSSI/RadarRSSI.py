@@ -18,11 +18,11 @@ def GetCustomTransmitterData(TXAntennaDBI: float, TXPowerDBM: float) -> Transmit
 
 def GetAutoDBPathLoss(RxFData: RFData) -> float:
     if RxFData.Channel < 15:
-        autoDBPL: float = 0.65 * -12 + RxFData.ReceivedDBM
+        autoDBPL: float = 0.65 * abs(RxFData.ReceivedDBM) + -12  
         if autoDBPL > 10:
             return autoDBPL
         return 10
-    autoDBPL: float = 0.5555555555555556 * RxFData.ReceivedDBM + -8.222222222222221
+    autoDBPL: float = 0.5555555555555556 * abs(RxFData.ReceivedDBM) + -8.222222222222221
     if autoDBPL > 2:
         return autoDBPL
     return 2

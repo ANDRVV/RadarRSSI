@@ -36,7 +36,7 @@
              # putting zero, the default path loss is
              # 10 dB for 2.4 Ghz & 2 dB for 5 Ghz
     # or
-    var DBPathLoss float = 0.001
+    DBPathLoss: float = 0.001
              # If you don't even want to enter the 
              # default path loss, add 0.001 dB.
 

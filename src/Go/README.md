@@ -39,7 +39,13 @@
                   Insert custom TX Antenna dBi
                   & TX Power dBm
                   */
-
+        var DBPathLoss float64 = RadarRSSI.GetAutoDBPathLoss(RFDATA)
+                  /*
+                  Return approximating DB Path Loss
+                  (according to some research)
+                  More precision on 2.4 Ghz
+                  */
+        // or
         var DBPathLoss float64 = 14
                   /*
                   Insert dB Path Loss

@@ -28,6 +28,11 @@
              # Insert custom TX Antenna dBi
              # & TX Power dBm
 
+    DBPathLoss: float = GetAutoDBPathLoss(RFDATA)
+             # Return approximating DB Path Loss
+             # (according to some research)
+             # More precision on 2.4 Ghz
+    # or
     DBPathLoss: float = 14
              # Insert dB Path Loss
     # or

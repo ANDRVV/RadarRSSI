@@ -16,6 +16,17 @@ def GetDefaultTransmitterData() -> TransmitterData:
 def GetCustomTransmitterData(TXAntennaDBI: float, TXPowerDBM: float) -> TransmitterData:
 	return TransmitterData(TXAntennaDBI = TXAntennaDBI, TXPowerDBM = TXPowerDBM)
 
+def GetAutoDBPathLoss(RxFData: RFData) -> float:
+    if RxFData.Channel < 15:
+        autoDBPL: float = 0.65 * -12 + RxFData.ReceivedDBM
+        if autoDBPL > 10:
+            return autoDBPL
+        return 10
+    autoDBPL: float = 0.5555555555555556 * RxFData.ReceivedDBM + -8.222222222222221
+    if autoDBPL > 2:
+        return autoDBPL
+    return 2
+
 def Radiolocate(RxFData: RFData, TXData: TransmitterData, DBPathLoss: float) -> float:
     if DBPathLoss > 0:
         totalPathLoss = DBPathLoss

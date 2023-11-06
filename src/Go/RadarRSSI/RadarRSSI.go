@@ -25,6 +25,21 @@ func GetCustomTransmitterData(TXAntennaDBI float64, TXPowerDBM float64) libs.Tra
 	return libs.TransmitterData{TXAntennaDBI: TXAntennaDBI, TXPowerDBM: TXPowerDBM}
 }
 
+func GetAutoDBPathLoss(RFData libs.RFData) (DBPathLoss float64) {
+	if RFData.Channel < 15 {
+    	var autoDBPL float64 = 0.65 * -12 + RFData.ReceivedDBM
+		if autoDBPL > 10 {
+			return autoDBPL
+		}
+		return 10
+	}
+	var autoDBPL float64 = 0.5555555555555556 * RFData.ReceivedDBM + -8.222222222222221 
+	if autoDBPL > 2 {
+		return autoDBPL
+	}
+	return 2 
+}
+
 func Radiolocate(RFData libs.RFData, TXData libs.TransmitterData, DBPathLoss float64) (meters float64) {
 	var totalPathLoss func() float64 = func() float64 {
 		if DBPathLoss > 0 {

@@ -29,6 +29,10 @@
 
 <p align="center">If you do not enter the path loss in the calculation, it will be by default <strong>10 dB for the 2.4</strong> Ghz band, and <strong>2 dB for the 5 Ghz</strong>. If you do not even want to assign the default path loss, just enter 0.001 dB, which will be negligible and no changes will be made in the calculation.</p>
 
+<h2 align="center">Auto-DBPathLoss</h2>
+
+<p>This library has an Auto-DBPathLoss system where the Path Loss is chosen via an algorithm, it was created through research and has been tested many times with excellent results. To use this feature just check the docs and use the Auto-DBPathLoss feature appropriately.</p>
+
 <h1 align="center">Programming languages</h1>
 
 <p align="center">RadarRSSI was written in the following languages and can be used as a library:</p>

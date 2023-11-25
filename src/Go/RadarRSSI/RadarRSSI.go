@@ -58,10 +58,6 @@ func Radiolocate(RFData libs.RFData, TXData libs.TransmitterData, DBPathLoss flo
 	info = append(info, TXData.TXAntennaDBI)
 	info = append(info, TXData.TXPowerDBM)
 	info = append(info, float64(RFData.Channel))
-	if RFData.Channel < 15 {
-		info = append(info, RFData.ReceivedDBM + totalPathLoss())
-	} else {
-		info = append(info, RFData.ReceivedDBM + totalPathLoss())
-	}
+	info = append(info, RFData.ReceivedDBM + totalPathLoss())
 	return libs.CalculateFriis(info)
 }

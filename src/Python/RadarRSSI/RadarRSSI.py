@@ -39,8 +39,5 @@ def Radiolocate(RxFData: RFData, TXData: TransmitterData, DBPathLoss: float) -> 
     info.append(TXData.TXAntennaDBI)
     info.append(TXData.TXPowerDBM)
     info.append(float(RxFData.Channel))
-    if RxFData.Channel < 15:
-        info.append(RxFData.ReceivedDBM + totalPathLoss)
-    else:
-        info.append(RxFData.ReceivedDBM + totalPathLoss)
+    info.append(RxFData.ReceivedDBM + totalPathLoss)
     return CalculateFriis(info)

@@ -46,7 +46,7 @@
                  If you don't even want to enter the default path loss, add 0.001 dB.
                  */
 
-        double APPRX_METERS = Radiolocate(RFData, TXData, DBPathLoss);
+        double APPRX_METERS = radiolocate(RFData, TXData, DBPathLoss);
 
         printf("%.1f meters", APPRX_METERS);
 

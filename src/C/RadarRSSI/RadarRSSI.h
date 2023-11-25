@@ -15,28 +15,28 @@ typedef struct {
     double txAntennaDBI;
 } TransmitterData;
 
-RFData GetRFDataFromRadiotap(uint8_t * packetData, double rxAntennaDBI) {
-	RFData RadioTapInfo = parseRT(packetData);
+RFData getRFDataFromRadiotap(uint8_t * packetData, double rxAntennaDBI) {
+	/*RFData RadioTapInfo = parseRT(packetData);
 	if (RadioTapInfo.channel > 0) {
 		RadioTapInfo.receivedDBM = rxAntennaDBI;
 		return RadioTapInfo;
 	}
-	return (RFData){};
+	return (RFData){};*/
 }
 
-RFData GetCustomRFData(double receivedDBM, int channel, double rxAntennaDBI) {
+RFData getCustomRFData(double receivedDBM, int channel, double rxAntennaDBI) {
 	return (RFData){.receivedDBM = receivedDBM, .channel = channel, .rxAntennaDBI = rxAntennaDBI};
 }
 
-TransmitterData GetDefaultTransmitterData() {
+TransmitterData getDefaultTransmitterData() {
 	return (TransmitterData){.txPowerDBM = 20.5, .txAntennaDBI = 3};
 }
 
-TransmitterData GetCustomTransmitterData(double txAntennaDBI, double txPowerDBM) {
+TransmitterData getCustomTransmitterData(double txAntennaDBI, double txPowerDBM) {
 	return (TransmitterData){.txPowerDBM = txPowerDBM, .txAntennaDBI = txAntennaDBI};
 }
 
-double GetAutoDBPathLoss(RFData RxFData) {
+double getAutoDBPathLoss(RFData RxFData) {
 	if (RxFData.channel < 15) {
     	double autoDBPL = 0.65 * abs(RxFData.receivedDBM) + -12;  
 		if (autoDBPL > 10) {
@@ -51,7 +51,7 @@ double GetAutoDBPathLoss(RFData RxFData) {
 	return 2;
 }
 
-double Radiolocate(RFData RxFData, TransmitterData TXData, double DBPathLoss) {
+double radiolocate(RFData RxFData, TransmitterData TXData, double DBPathLoss) {
 	double totalPathLoss = DBPathLoss > 0 ? DBPathLoss : (RxFData.channel < 15 ? 10.0 : 2.0);
 	double info[5]; 
 	info[0] = RxFData.rxAntennaDBI;

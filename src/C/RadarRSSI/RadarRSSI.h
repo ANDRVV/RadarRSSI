@@ -1,6 +1,8 @@
-#include "libs/calc.h"
-#include "libs/utils.h"
+#include "libs\calc.h"
+#include "libs\utils.h"
+#include "libs\radiotap.h"
 #include <math.h>
+#include <stdint.h>
 
 typedef struct {
     double receivedDBM;
@@ -12,6 +14,15 @@ typedef struct {
     double txPowerDBM;
     double txAntennaDBI;
 } TransmitterData;
+
+RFData GetRFDataFromRadiotap(uint8_t * packetData, double rxAntennaDBI) {
+	RFData RadioTapInfo = parseRT(packetData);
+	if (RadioTapInfo.channel > 0) {
+		RadioTapInfo.receivedDBM = rxAntennaDBI;
+		return RadioTapInfo;
+	}
+	return (RFData){};
+}
 
 RFData GetCustomRFData(double receivedDBM, int channel, double rxAntennaDBI) {
 	return (RFData){.receivedDBM = receivedDBM, .channel = channel, .rxAntennaDBI = rxAntennaDBI};

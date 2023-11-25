@@ -1,6 +1,6 @@
-#include <stdio.h>
-
 #pragma once
+
+#include <stdio.h>
 
 double getLinearFrequency(int channel) {
     int freq = 0;

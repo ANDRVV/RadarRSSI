@@ -1,1 +1,1 @@
-from .RadarRSSI import GetRFDataFromRadiotap, GetCustomRFData, GetDefaultTransmitterData, GetCustomTransmitterData, Radiolocate
+from .RadarRSSI import GetRFDataFromRadiotap, GetCustomRFData, GetDefaultTransmitterData, GetCustomTransmitterData, Radiolocate, GetAutoDBPathLoss

@@ -10,9 +10,9 @@
 
 <h1 align="center">How it works and what RadarRSSI is</h1>
 
-<p align="center"><strong>RadarRSSI is a radiolocation tool</strong> based on <i>RSSI</i> (Received Signal Strength Indicator).</p>
+<p align="center"><strong>RadarRSSI is a radiolocation tool</strong> based on <i href="https://github.com/ANDRVV/RadarRSSI/blob/main/RRVP/RRVP.pdf">RRVP</i> algorithm.</p>
 
-<p>This tool uses the first Friis equation to calculate its approximate meters. Among the information that must be entered to make the calculation are:</p>
+<p>The information that must be entered to make the calculation are:</p>
 
 <div align="left" style="display:grid;place-items:center;">
     <ol>

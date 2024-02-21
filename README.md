@@ -31,7 +31,7 @@
 
 <h2 align="center">Auto-DBPathLoss</h2>
 
-<p>This library has an Auto-DBPathLoss system where the Path Loss is chosen via an algorithm, it was created through research and has been tested many times with excellent results. To use this feature just check the docs and use the Auto-DBPathLoss function appropriately.</p>
+<p>With RRVP this library has an Auto-DBPathLoss system where the Path Loss is chosen via an algorithm, it was created through research and has been tested many times with excellent results. To use this feature just check the docs and use the Auto-DBPathLoss function appropriately.</p>
 
 <h1 align="center">Programming languages</h1>
 

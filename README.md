@@ -10,7 +10,7 @@
 
 <h1 align="center">How it works and what RadarRSSI is</h1>
 
-<p align="center"><strong>RadarRSSI</strong> is a radiolocation tool based on <strong><a href="https://github.com/ANDRVV/RadarRSSI/blob/main/RRVP/RRVP.pdf">RRVP</a></strong> algorithm.</p>
+<p align="center"><strong>RadarRSSI</strong> is a radiolocation tool based on proportional algorithm.</p>
 
 <p>The information that must be entered to make the calculation are:</p>
 

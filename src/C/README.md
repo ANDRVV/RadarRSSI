@@ -28,23 +28,6 @@
                   Return approximating DB Path Loss
                   (according to some research)
                   */
-        // or
-        double DBPathLoss = 14;
-                  /*
-                  Insert dB Path Loss
-                  */
-        // or
-        double DBPathLoss = 0;
-                  /*
-                  If you don't want insert dB Path Loss,
-                  putting zero, the default path loss is
-                  10 dB for 2.4 Ghz & 2 dB for 5 Ghz
-                  */
-        // or
-        double DBPathLoss = 0.001;
-                 /*
-                 If you don't even want to enter the default path loss, add 0.001 dB.
-                 */
 
         double APPRX_METERS = radiolocate(RFData, TXData, DBPathLoss);
 

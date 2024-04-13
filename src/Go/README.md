@@ -44,23 +44,6 @@
                   Return approximating DB Path Loss
                   (according to some research)
                   */
-        // or
-        var DBPathLoss float64 = 14
-                  /*
-                  Insert dB Path Loss
-                  */
-        // or
-        var DBPathLoss float64 = 0
-                  /*
-                  If you don't want insert dB Path Loss,
-                  putting zero, the default path loss is
-                  10 dB for 2.4 Ghz & 2 dB for 5 Ghz
-                  */
-        // or
-        var DBPathLoss float64 = 0.001
-                 /*
-                 If you don't even want to enter the default path loss, add 0.001 dB.
-                 */
 
         APPRX_METERS = RadarRSSI.Radiolocate(RFData, TXData, DBPathLoss)
 

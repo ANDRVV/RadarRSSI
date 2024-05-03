@@ -30,5 +30,5 @@ def Radiolocate(RxFData: RFData, TXData: TransmitterData, DBPathLoss: float) -> 
     info.append(TXData.TXAntennaDBI)
     info.append(TXData.TXPowerDBM)
     info.append(float(RxFData.Channel))
-    info.append(RxFData.ReceivedDBM - DBPathLoss)
+    info.append(RxFData.ReceivedDBM + DBPathLoss)
     return CalculateFriis(info)

@@ -53,6 +53,6 @@ double radiolocate(RFData RxFData, TransmitterData TXData, double DBPathLoss) {
 	info[1] = TXData.txAntennaDBI;
 	info[2] = TXData.txPowerDBM;
 	info[3] = (double)RxFData.channel;
-	info[4] = RxFData.receivedDBM - DBPathLoss;
+	info[4] = RxFData.receivedDBM + DBPathLoss;
 	return calculateFriis(info, 5);
 }

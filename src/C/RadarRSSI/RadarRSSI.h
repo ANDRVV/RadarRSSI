@@ -15,14 +15,16 @@ typedef struct {
     double txAntennaDBI;
 } TransmitterData;
 
+/*
 RFData getRFDataFromRadiotap(uint8_t * packetData, double rxAntennaDBI) {
-	/*RFData RadioTapInfo = parseRT(packetData);
+	RFData RadioTapInfo = parseRT(packetData);
 	if (RadioTapInfo.channel > 0) {
 		RadioTapInfo.receivedDBM = rxAntennaDBI;
 		return RadioTapInfo;
 	}
-	return (RFData){};*/
+	return (RFData){};
 }
+*/
 
 RFData getCustomRFData(double receivedDBM, int channel, double rxAntennaDBI) {
 	return (RFData){.receivedDBM = receivedDBM, .channel = channel, .rxAntennaDBI = rxAntennaDBI};
